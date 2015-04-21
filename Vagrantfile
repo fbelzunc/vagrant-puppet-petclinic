@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
 
   # https://docs.vagrantup.com/v2/provisioning/puppet_apply.html
   config.vm.provision "puppet" do |puppet|
-    puppet.manifest_file = "default.pp"
+    puppet.manifest_file = "default-jenkins.pp"
     puppet.module_path = "modules"
     puppet.options=["--verbose", "--reports http" ,"--reporturl=http://jenkins.localdomain:8090/puppet/report"]
   end
