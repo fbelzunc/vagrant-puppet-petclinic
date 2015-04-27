@@ -23,6 +23,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "puppet" do |puppet|
     puppet.manifest_file = "default-jenkins.pp"
     puppet.module_path = "modules"
-    puppet.options=["--verbose", "--reports http" ,"--reporturl=http://jenkins.localdomain:8090/puppet/report"]
+    puppet.options=["--verbose", "--reports http" ,"--reporturl=admin:4266de80cbc8db982c816d0919d55bbd@http://jenkins.localdomain:8090/puppet/report"]
   end
 end
